@@ -10,3 +10,7 @@ GO_VERSION = "1.22.2"
 
 [context.production]
 command = "npm run build:production"
+
+[functions]
+  directory = "netlify/functions/"
+  node_bundler = "esbuild"

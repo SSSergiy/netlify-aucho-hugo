@@ -1,0 +1,21 @@
+backend:
+  name: proxy
+  proxy_url: "https://joyful-gumption-de1048.netlify.app/.netlify/functions/proxy"
+  branch: main
+  auth_type: "pkce" 
+  auth_endpoint: "dev-l1aq3z2mpam3n6yn.us.auth0.com/authorize" 
+  app_id: "MkqSNndP1IPWN131vt8Y9C9Yojc9oEbi" 
+
+media_folder: "static/images/uploads" # Папка для картинок
+public_folder: "/images/uploads"
+
+collections:
+  - name: "blog" # Название для постов
+    label: "Blog Posts" # Как будет в админке
+    folder: "content/en/blog" # Где лежат посты в Docsy
+    create: true
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
